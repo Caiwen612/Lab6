@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="my.edu.tarc.epf.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_nav_investment"
+            app:destination="@id/nav_investment"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_dividend"
+            app:destination="@id/nav_dividend"
+            app:popUpToInclusive="false" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_dividend"
+        android:name="my.edu.tarc.epf.ui.dividend.DividendFragment"
+        android:label="@string/menu_dividend"
+        tools:layout="@layout/fragment_dividend" />
+
+    <fragment
+        android:id="@+id/nav_investment"
+        android:name="my.edu.tarc.epf.ui.investment.InvestmentFragment"
+        android:label="@string/menu_investment"
+        tools:layout="@layout/fragment_investment" />
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="my.edu.tarc.epf.ui.gallery.GalleryFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_gallery" />
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="my.edu.tarc.epf.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/nav_about"
+        android:name="my.edu.tarc.epf.ui.about.AboutFragment"
+        android:label="@string/action_about" />
+</navigation>
