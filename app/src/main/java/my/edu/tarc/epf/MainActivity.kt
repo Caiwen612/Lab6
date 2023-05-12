@@ -64,7 +64,15 @@ class MainActivity : AppCompatActivity() {
             }
         }
         onBackPressedDispatcher.addCallback(backPressedCallback)
-    }
+
+        //Handling the Header click event
+        val view = navView.getHeaderView(0)
+        view.setOnClickListener{
+            findNavController(R.id.nav_host_fragment_content_main)
+                .navigate(R.id.nav_profile)
+            binding.drawerLayout.closeDrawers()
+        }
+    } // End of onCreated
 
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -78,7 +86,7 @@ class MainActivity : AppCompatActivity() {
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+    override fun onOptionsItemSelected(item: MenuItem): Boolean { //The menu is take part by main activity
         if(item.itemId == R.id.action_settings){
             Snackbar.make(findViewById(R.id.nav_host_fragment_content_main), R.string.action_settings, Snackbar.LENGTH_SHORT).show()
         }

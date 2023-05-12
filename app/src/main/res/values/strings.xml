@@ -43,4 +43,10 @@
     <string name="exit_message">Are you sure you want to exit?</string>
     <string name="exit">Exit</string>
     <string name="cancel">Cancel</string>
+    <string name="profile">Profile</string>
+    <string name="shared_pref">my.edu.tarc.epf.profile</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="save">Save</string>
+    <string name="profile_save">Profile Save</string>
 </resources>
